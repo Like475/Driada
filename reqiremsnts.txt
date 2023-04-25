@@ -1,3 +1,4 @@
 disnake
 dotenv
 flask
+disnake-jishaku
