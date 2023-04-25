@@ -2,6 +2,7 @@ import os
 import disnake
 from dotenv import load_dotenv
 from disnake.ext import commands
+from tools.keep_alive import keep_alive  # Required for deployment in repl.it
 
 if os.path.exists('./.env'):
     load_dotenv()
@@ -22,4 +23,5 @@ async def ping(inter):
     await inter.response.send_message('Pong!')
 
 if __name__ == '__main__':
+    keep_alive()  # Required for deployment in repl.it
     bot.run(os.environ['BOT_TOKEN'])
